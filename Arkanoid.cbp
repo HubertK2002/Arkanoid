@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add option="-lSDL2" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Arkanoid" prefix_auto="1" extension_auto="1" />
@@ -31,6 +34,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Graphics/Drawer.hpp" />
+		<Unit filename="Graphics/Surface.cpp" />
+		<Unit filename="Graphics/Surface.hpp" />
+		<Unit filename="Graphics/Window.cpp" />
+		<Unit filename="Graphics/Window.hpp" />
+		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
