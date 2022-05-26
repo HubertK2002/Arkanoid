@@ -1,11 +1,11 @@
 #pragma once
 #include "Window.hpp"
 #include "Surface.hpp"
-void Draw( Window& window, Surface& surface)
+#include "Texture.hpp"
+
+void Render(Window& window, Texture& texture1)
 {
-     SDL_BlitSurface( surface.image, NULL, window.windowSurface, NULL );
-}
-void UpdateWindow(Window& window)
-{
-    SDL_UpdateWindowSurface( window.window );
+    SDL_Renderer* r = window.getRenderer();
+    SDL_RenderCopy(r,texture1.texture,NULL,NULL);
+    SDL_RenderPresent(r);
 }

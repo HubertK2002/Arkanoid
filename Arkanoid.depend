@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1653577878 source:/home/hubert/Projekty/Arkanoid/Graphics/Surface.cpp
+	"Surface.hpp"
+
+1653577878 /home/hubert/Projekty/Arkanoid/Graphics/Surface.hpp
+	<SDL2/SDL.h>
+	<string>
+
+1653604907 source:/home/hubert/Projekty/Arkanoid/Graphics/Window.cpp
+	"Window.hpp"
+
+1653604877 /home/hubert/Projekty/Arkanoid/Graphics/Window.hpp
+	<SDL2/SDL.h>
+
+1653604866 source:/home/hubert/Projekty/Arkanoid/main.cpp
+	<SDL2/SDL.h>
+	"Graphics/Window.hpp"
+	"Graphics/Surface.hpp"
+	"Graphics/Drawer.hpp"
+	"Graphics/Texture.hpp"
+
+1653604922 /home/hubert/Projekty/Arkanoid/Graphics/Drawer.hpp
+	"Window.hpp"
+	"Surface.hpp"
+	"Texture.hpp"
+
+1653603659 source:/home/hubert/Projekty/Arkanoid/Graphics/Texture.cpp
+	"Texture.hpp"
+
+1653604225 /home/hubert/Projekty/Arkanoid/Graphics/Texture.hpp
+	<SDL2/SDL.h>
+	"Window.hpp"
+	"Surface.hpp"
+
