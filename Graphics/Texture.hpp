@@ -7,4 +7,7 @@ struct Texture
 {
     SDL_Texture* texture;
     Texture(Window& window,Surface& surface);
+    Texture() :texture(NULL) {}
+
+    void init(Window& window, Surface& surface);
 };

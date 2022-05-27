@@ -9,3 +9,8 @@ Surface::~Surface()
     SDL_FreeSurface( image );
     image = NULL;
 }
+
+void Surface::init(std::string source)
+{
+    image = SDL_LoadBMP(source.c_str());
+}
