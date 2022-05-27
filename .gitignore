@@ -30,4 +30,8 @@
 *.exe
 *.out
 *.app
+#SDL dependencies
+SDL2/*
+#Others
+x64/*
 

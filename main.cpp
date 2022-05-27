@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include "Graphics/Window.hpp"
 #include "Graphics/Surface.hpp"
 #include "Graphics/Drawer.hpp"
