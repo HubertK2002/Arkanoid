@@ -32,6 +32,7 @@
 *.app
 #SDL dependencies
 SDL2/*
+SDL2_image/*
 #Others
 x64/*
 
