@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game\Bricks\Brick.cpp" />
     <ClCompile Include="Graphics\Surface.cpp" />
     <ClCompile Include="Graphics\Texture.cpp" />
     <ClCompile Include="Graphics\Window.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\Bricks\Brick.hpp" />
     <ClInclude Include="Graphics\Drawer.hpp" />
     <ClInclude Include="Graphics\Surface.hpp" />
     <ClInclude Include="Graphics\Texture.hpp" />
