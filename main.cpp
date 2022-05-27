@@ -13,6 +13,8 @@ const int sh = 1080;
 
 Window window;
 Surface brickBMP;
+Surface ballPNG;
+Texture ballTexture;
 Texture brickTexture;
 Brick brick;
 PinkBrick pink;
@@ -41,8 +43,14 @@ int main(int argc, char* args[])
 void init()
 {
     window.init(sw, sh);
+    //Surfaces
     brickBMP.initBMP("src/Bricks.bmp");
+    ballPNG.initBMP("src/Ball.bmp");
+    //textures
     brickTexture.init(window, brickBMP);
+    ballTexture.init(window, ballPNG);
+
+    //bricks
     brick.init(100, 200);
     brick.staticInit(0, 0);
     pink.init(300, 400);
@@ -51,6 +59,7 @@ void init()
     green.init(800, 200);
     blue.init(800, 400);
 
+    //ball
     ball.init(300, 300);
     
 }
@@ -60,14 +69,16 @@ void update()
 }
 void draw()
 {
-    //Render(window, txt);
-    //std::cout << brick.height;
+    //Bricks
     DrawBrick(window, &brick, brickTexture);
     DrawBrick(window, &pink, brickTexture);
     DrawBrick(window, &yellow, brickTexture);
     DrawBrick(window, &orange, brickTexture);
     DrawBrick(window, &green, brickTexture);
     DrawBrick(window, &blue, brickTexture);
+    //ball
+    DrawBall(window, ball, ballTexture);
+    //Update render
     PresentRender(window);
 }
 void close()
