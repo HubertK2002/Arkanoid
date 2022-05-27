@@ -3,7 +3,7 @@
 Window::Window(int width, int height)
 {
      //Initialize SDL
-    SDL_Init( SDL_INIT_VIDEO );
+    SDL_Init( SDL_INIT_EVERYTHING );
 
     //Create window
     window = SDL_CreateWindow( "Arkanoid", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN );

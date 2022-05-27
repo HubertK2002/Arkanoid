@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Game\Ball.cpp" />
     <ClCompile Include="Game\Bricks\Brick.cpp" />
     <ClCompile Include="Graphics\Surface.cpp" />
     <ClCompile Include="Graphics\Texture.cpp" />
@@ -26,6 +27,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game\Ball.hpp" />
     <ClInclude Include="Game\Bricks\Brick.hpp" />
     <ClInclude Include="Graphics\Drawer.hpp" />
     <ClInclude Include="Graphics\Surface.hpp" />
@@ -92,8 +94,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\include;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_image\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\lib\x64;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_image\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -136,7 +138,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
