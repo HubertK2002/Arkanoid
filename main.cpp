@@ -13,6 +13,11 @@ Window window;
 Surface surface;
 Texture txt;
 Brick brick;
+PinkBrick pink;
+OrangeBrick orange;
+YellowBrick yellow;
+GreenBrick green;
+BlueBrick blue;
 
 
 void init();
@@ -37,6 +42,11 @@ void init()
     txt.init(window, surface);
     brick.init(100, 200);
     brick.staticInit(0, 0);
+    pink.init(300, 400);
+    orange.init(200, 200);
+    yellow.init(500, 600);
+    green.init(800, 200);
+    blue.init(800, 400);
     
 }
 void update()
@@ -47,7 +57,12 @@ void draw()
 {
     //Render(window, txt);
     //std::cout << brick.height;
-    DrawBrick(window, brick,txt);
+    DrawBrick(window, &brick,txt);
+    DrawBrick(window, &pink, txt);
+    DrawBrick(window, &yellow, txt);
+    DrawBrick(window, &orange, txt);
+    DrawBrick(window, &green, txt);
+    DrawBrick(window, &blue, txt);
     PresentRender(window);
 }
 void close()
