@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL.h>
+#include <SDL_image.h>
 #include <string>
 
 struct Surface
@@ -10,6 +11,7 @@ struct Surface
     Surface() : image(NULL) {}
     ~Surface();
 
-    void init(std::string source);
+    void initBMP(std::string source);
+    void initPNG(std::string source);
 
 };

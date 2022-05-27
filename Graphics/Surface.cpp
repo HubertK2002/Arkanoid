@@ -10,7 +10,12 @@ Surface::~Surface()
     image = NULL;
 }
 
-void Surface::init(std::string source)
+void Surface::initBMP(std::string source)
 {
     image = SDL_LoadBMP(source.c_str());
+}
+
+void Surface::initPNG(std::string source)
+{
+    image = IMG_Load(source.c_str());
 }
