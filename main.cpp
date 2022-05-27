@@ -37,6 +37,7 @@ void init()
     txt.init(window, surface);
     brick.init(100, 200);
     brick.staticInit(0, 0);
+    
 }
 void update()
 {
@@ -44,8 +45,10 @@ void update()
 }
 void draw()
 {
-    Render(window, txt);
-    std::cout << brick.height;
+    //Render(window, txt);
+    //std::cout << brick.height;
+    DrawBrick(window, brick,txt);
+    PresentRender(window);
 }
 void close()
 {

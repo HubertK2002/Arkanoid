@@ -2,8 +2,7 @@
 
 void Brick::init(int x, int y)
 {
-	posX = (float)x;
-	posY = (float)y;
+	pos = { x,y,width,height };
 }
 
 void Brick::staticInit(int txtPosX, int txtPosY)

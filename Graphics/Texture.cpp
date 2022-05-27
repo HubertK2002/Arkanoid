@@ -10,3 +10,5 @@ void Texture::init(Window& window, Surface& surface)
 {
     texture = SDL_CreateTextureFromSurface(window.getRenderer(), surface.image);
 }
+
+
