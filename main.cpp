@@ -61,7 +61,7 @@ void init()
     window.init(sw, sh);
     //Surfaces
     brickBMP.initBMP("src/Bricks.bmp");
-    ballPNG.initBMP("src/Ball.bmp");
+    ballPNG.initBMP("src/Ball2.bmp");
     BG.initBMP("src/bg.bmp");
     //textures
     brickTexture.init(window, brickBMP);
@@ -78,16 +78,17 @@ void init()
     orange.init(200, 200);
     yellow.init(500, 600);
     green.init(800, 200);
-    blue.init(800, 400);
+    blue.init(1200, 440);
 
     //ball
-    ball.init(300, 300,5,5);
+    ball.init(300, 300,2,2);
     
 }
 void update()
 {
     ball.update();
     collider.ballCollideWithWalls(ball);
+    collider.ballCollideWithBrick(ball, blue);
 }
 void draw()
 {
