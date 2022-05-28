@@ -35,10 +35,19 @@ void close();
 int main(int argc, char* args[])
 {
     init();
-    for (int i = 0; i < 250; i++) {
+    bool cont = true;
+    SDL_Event e;
+    while (cont)
+    {
+        while (SDL_PollEvent(&e) != 0)
+        {
+            if (e.key.keysym.scancode == SDL_SCANCODE_BACKSPACE)
+            {
+                cont = false;
+            }
+        }
         update();
         draw();
-        SDL_Delay(100);
     }
     close();
 
@@ -93,7 +102,7 @@ void draw()
 }
 void close()
 {
-    SDL_Delay(5000);
+    //SDL_Delay(5000);
     SDL_Quit();
 }
 
