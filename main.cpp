@@ -7,6 +7,7 @@
 #include "Graphics/Texture.hpp"
 #include "Game/Bricks/Brick.hpp"
 #include "Game/Ball.hpp"
+#include "Physics/Collider.hpp"
 
 const int sw = 1920;
 const int sh = 1080;
@@ -25,6 +26,7 @@ YellowBrick yellow;
 GreenBrick green;
 BlueBrick blue;
 Ball ball;
+Collider collider;
 
 
 void init();
@@ -66,6 +68,9 @@ void init()
     ballTexture.init(window, ballPNG);
     BGT.init(window, BG);
 
+    //Collider
+    collider.init(sw, sh);
+
     //bricks
     brick.init(100, 200);
     brick.staticInit(0, 0);
@@ -82,6 +87,7 @@ void init()
 void update()
 {
     ball.update();
+    collider.ballCollideWithWalls(ball);
 }
 void draw()
 {

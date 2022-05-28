@@ -9,6 +9,10 @@ public:
 	Ball():posX(),posY(),speedX(),speedY() {}
 	void init(int x, int y, int sx, int sy);
 	void update();
+	void bounceX();
+	void bounceY();
+	void setX(int x);
+	void setY(int y);
 	inline int getPosX() { return (int)posX; }
 	inline int getPosY() { return (int)posY; }
 	inline int getRadius() { return radius; }

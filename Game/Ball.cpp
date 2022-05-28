@@ -13,3 +13,23 @@ void Ball::update()
 	posX += speedX;
 	posY += speedY;
 }
+
+void Ball::bounceX()
+{
+	speedX *= -1.0f;
+}
+
+void Ball::bounceY()
+{
+	speedY *= -1.0f;
+}
+
+void Ball::setX(int x)
+{
+	this->posX = (float)x;
+}
+
+void Ball::setY(int y)
+{
+	this->posY = (float)y;
+}

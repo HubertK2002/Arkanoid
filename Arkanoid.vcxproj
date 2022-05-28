@@ -25,6 +25,7 @@
     <ClCompile Include="Graphics\Texture.cpp" />
     <ClCompile Include="Graphics\Window.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Physics\Collider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Ball.hpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="Graphics\Surface.hpp" />
     <ClInclude Include="Graphics\Texture.hpp" />
     <ClInclude Include="Graphics\Window.hpp" />
+    <ClInclude Include="Physics\Collider.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
