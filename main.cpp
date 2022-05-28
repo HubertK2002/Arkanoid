@@ -14,8 +14,10 @@ const int sh = 1080;
 Window window;
 Surface brickBMP;
 Surface ballPNG;
+Surface BG;
 Texture ballTexture;
 Texture brickTexture;
+Texture BGT;
 Brick brick;
 PinkBrick pink;
 OrangeBrick orange;
@@ -46,9 +48,11 @@ void init()
     //Surfaces
     brickBMP.initBMP("src/Bricks.bmp");
     ballPNG.initBMP("src/Ball.bmp");
+    BG.initBMP("src/bg.bmp");
     //textures
     brickTexture.init(window, brickBMP);
     ballTexture.init(window, ballPNG);
+    BGT.init(window, BG);
 
     //bricks
     brick.init(100, 200);
@@ -69,6 +73,9 @@ void update()
 }
 void draw()
 {
+    //Background
+    DrawBG(window, BGT, sw, sh);
+
     //Bricks
     DrawBrick(window, &brick, brickTexture);
     DrawBrick(window, &pink, brickTexture);

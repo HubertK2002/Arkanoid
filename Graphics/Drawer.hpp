@@ -23,6 +23,14 @@ void DrawBall(Window& window, Ball& ball, Texture& texture)
     SDL_Renderer* r = window.getRenderer();
     SDL_Rect pos = { ball.getPosX(),ball.getPosY(), ball.getRadius(),ball.getRadius()};
     SDL_RenderCopy(r,texture.texture,NULL,&pos);
+    
+}
+
+void DrawBG(Window& window, Texture& BG, int w, int h)
+{
+    SDL_Renderer* r = window.getRenderer();
+    SDL_Rect pos = { 0,0,w,h };
+    SDL_RenderCopy(r, BG.texture, NULL, &pos);
 }
 
 void PresentRender(Window& window)
