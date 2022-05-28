@@ -6,8 +6,9 @@
 class Ball
 {
 public:
-	Ball():posX(),posY() {}
-	void init(int x, int y);
+	Ball():posX(),posY(),speedX(),speedY() {}
+	void init(int x, int y, int sx, int sy);
+	void update();
 	inline int getPosX() { return (int)posX; }
 	inline int getPosY() { return (int)posY; }
 	inline int getRadius() { return radius; }
@@ -18,4 +19,6 @@ private:
 	float posX;
 	float posY;
 	const int radius = 25;
+	float speedX;
+	float speedY;
 };

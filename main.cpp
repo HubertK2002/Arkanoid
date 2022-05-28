@@ -35,8 +35,11 @@ void close();
 int main(int argc, char* args[])
 {
     init();
-    update();
-    draw();
+    for (int i = 0; i < 250; i++) {
+        update();
+        draw();
+        SDL_Delay(100);
+    }
     close();
 
     return 0;
@@ -64,12 +67,12 @@ void init()
     blue.init(800, 400);
 
     //ball
-    ball.init(300, 300);
+    ball.init(300, 300,5,5);
     
 }
 void update()
 {
-
+    ball.update();
 }
 void draw()
 {
