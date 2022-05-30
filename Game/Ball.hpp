@@ -21,7 +21,6 @@ public:
 	inline int getCenterX() { return (int)posX + (float)radius; }
 	inline int getCenterY() { return (int)posY + (float)radius; }
 	inline int getRadius() { return radius; }
-	inline int getHalfRadius() { return radius / 2; }
 	inline cordinates getCenterCordinates() { return cordinates{ getCenterX(),getCenterY() }; }
 	inline float getSpeedX() { return speedX; }
 	inline float getSpeedY() { return speedY; }
