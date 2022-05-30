@@ -60,7 +60,7 @@ void init()
     window.init(sw, sh);
     //Surfaces
     brickBMP.initBMP("src/Bricks.bmp");
-    ballPNG.initBMP("src/Ball2.bmp");
+    ballPNG.initBMP("src/ball.bmp");
     BG.initBMP("src/bg.bmp");
     //textures
     brickTexture.init(window, brickBMP);
