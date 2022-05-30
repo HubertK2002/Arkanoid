@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Audio\Player.cpp" />
     <ClCompile Include="Game\Ball.cpp" />
     <ClCompile Include="Game\Bricks\Brick.cpp" />
     <ClCompile Include="Game\Bricks\BrickContainer.cpp" />
@@ -29,6 +30,7 @@
     <ClCompile Include="Physics\Collider.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Audio\Player.hpp" />
     <ClInclude Include="Game\Ball.hpp" />
     <ClInclude Include="Game\Bricks\Brick.hpp" />
     <ClInclude Include="Game\Bricks\BrickContainer.hpp" />
@@ -101,8 +103,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\include;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_image\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\lib\x64;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_image\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\include;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_image\include;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_mixer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2\lib\x64;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_image\lib\x64;C:\Users\hubis\Desktop\Visual\Arkanoid\SDL2_mixer\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -145,7 +147,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

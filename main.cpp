@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
 #include <iostream>
 #include "Graphics/Window.hpp"
 #include "Graphics/Surface.hpp"
@@ -9,6 +10,7 @@
 #include "Game/Ball.hpp"
 #include "Physics/Collider.hpp"
 #include "Game/Bricks/BrickContainer.hpp"
+#include "Audio/Player.hpp"
 
 const int sw = 1920;
 const int sh = 1080;
@@ -23,6 +25,7 @@ Texture BGT;
 Ball ball;
 Collider collider;
 BrickContainer bricks;
+Player player;
 
 
 void init();
@@ -80,20 +83,24 @@ void init()
 
     //ball
     ball.init(1350, 330,-3,3);
+
+    player.playMainMusicTheme();
     
 }
 void update()
 {
     ball.update();
-    collider.ballCollideWithWalls(ball);
+    if (collider.ballCollideWithWalls(ball)) player.ballWallBounceSoundEffect();
     if (bricks.hasSomething())
     {
         int ClosestBrickIndex = bricks.getClosestBrickIndex(ball.getCenterCordinates());
         if (collider.ballCollideWithBrick(ball, bricks.getBrickWithIndex(ClosestBrickIndex)))
         {
             bricks.eraseBrickWithIndex(ClosestBrickIndex);
+            player.ballBrickBounceSoundEffect();
         }
     }
+    
 
 }
 void draw()
