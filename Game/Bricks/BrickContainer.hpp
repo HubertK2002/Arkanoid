@@ -11,6 +11,8 @@ public:
 	void addBrick(Brick* brick, int x, int y);
 	inline Container getBricks() { return brickContainer; }
 	inline Brick* getBrickWithIndex(int i) { return brickContainer[i]; }
+	int getClosestBrickIndex(cordinates wsp);
+	Brick* getClosestBrick(cordinates wsp);
 private:
 	Container brickContainer;
 };
