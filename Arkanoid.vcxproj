@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Game\Ball.cpp" />
     <ClCompile Include="Game\Bricks\Brick.cpp" />
+    <ClCompile Include="Game\Bricks\BrickContainer.cpp" />
     <ClCompile Include="Graphics\Surface.cpp" />
     <ClCompile Include="Graphics\Texture.cpp" />
     <ClCompile Include="Graphics\Window.cpp" />
@@ -30,6 +31,7 @@
   <ItemGroup>
     <ClInclude Include="Game\Ball.hpp" />
     <ClInclude Include="Game\Bricks\Brick.hpp" />
+    <ClInclude Include="Game\Bricks\BrickContainer.hpp" />
     <ClInclude Include="Graphics\Drawer.hpp" />
     <ClInclude Include="Graphics\Surface.hpp" />
     <ClInclude Include="Graphics\Texture.hpp" />

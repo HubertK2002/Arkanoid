@@ -4,6 +4,8 @@
 #include "Texture.hpp"
 #include "../Game/Bricks/Brick.hpp"
 #include "../Game/Ball.hpp"
+#include "../Game/Bricks/BrickContainer.hpp"
+#include <vector>
 
 void Render(Window& window, Texture& texture1)
 {
@@ -31,6 +33,14 @@ void DrawBG(Window& window, Texture& BG, int w, int h)
     SDL_Renderer* r = window.getRenderer();
     SDL_Rect pos = { 0,0,w,h };
     SDL_RenderCopy(r, BG.texture, NULL, &pos);
+}
+
+void DrawBricks(Window& window, Texture& txt, std::vector<Brick*> BrickContainer)
+{
+    for (auto brick : BrickContainer)
+    {
+        DrawBrick(window, brick, txt);
+    }
 }
 
 void PresentRender(Window& window)

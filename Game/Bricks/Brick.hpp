@@ -16,6 +16,7 @@ public:
 	static constexpr SDL_Rect txtPos = {0,0,60,30};
 
 	Brick() : pos(),corners() {}
+	Brick(int x, int y);
 
 	void init(int x, int y);
 	static void staticInit(int txtPosX, int txtPosY);

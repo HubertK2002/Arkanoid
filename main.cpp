@@ -8,6 +8,7 @@
 #include "Game/Bricks/Brick.hpp"
 #include "Game/Ball.hpp"
 #include "Physics/Collider.hpp"
+#include "Game/Bricks/BrickContainer.hpp"
 
 const int sw = 1920;
 const int sh = 1080;
@@ -27,6 +28,7 @@ GreenBrick green;
 BlueBrick blue;
 Ball ball;
 Collider collider;
+BrickContainer bricks;
 
 
 void init();
@@ -80,6 +82,8 @@ void init()
     green.init(800, 200);
     blue.init(1200, 420);
 
+    bricks.addBrick(new BlueBrick(),600,900);
+
     //ball
     ball.init(1350, 330,-3,3);
     
@@ -102,6 +106,9 @@ void draw()
     DrawBrick(window, &orange, brickTexture);
     DrawBrick(window, &green, brickTexture);
     DrawBrick(window, &blue, brickTexture);
+
+    DrawBricks(window, brickTexture, bricks.getBricks());
+
     //ball
     DrawBall(window, ball, ballTexture);
     //Update render
