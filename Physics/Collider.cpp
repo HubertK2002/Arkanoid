@@ -154,7 +154,7 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick* brick)
 	if (distanceBetween <= ((float)ball.getRadius() + halfdiagonal))
 	{
 		//Jeœli pi³ka nie znajduje siê w obrêbie ceg³y styka siê z wierzcho³kiem
-		if (ballX < brick->getTopLeft().first || ballX > brick->BottomRight().first)
+		/*if (ballX < brick->getTopLeft().first || ballX > brick->BottomRight().first)
 		{
 			if (ballY > brick->BottomLeft().second || ballY < brick->TopRight().second)
 			{
@@ -162,7 +162,7 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick* brick)
 				ball.bounceY();
 				return true;
 			}
-		}
+		}*/
 
 		//Sprawdzenie Stycznoœci z wierzcho³kami
 		if (ball.getSpeedX() > 0) //Jeœli pi³ka leci w prawo
