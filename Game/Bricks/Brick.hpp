@@ -27,12 +27,12 @@ public:
 	inline int getCenterX() { return pos.x + (width / 2); }
 	inline int getCenterY() { return pos.y + (height / 2); }
 	inline int getDiagonal() { return sqrt(pow(width, 2) + pow(height, 2)); }
-	inline int getHalfDiagonal() { return sqrt(pow(width, 2) + pow(height, 2))/2; }
+	inline float getHalfDiagonal() { return sqrt( (float)pow(width, 2) + (float)pow(height, 2) )/2.0; }
 	inline cordinates getTopLeft() { return corners[0]; }
 	inline cordinates TopRight() { return corners[1]; }
 	inline cordinates BottomRight() { return corners[2]; }
 	inline cordinates BottomLeft() { return corners[3]; }
-	inline std::array<cordinates, 4> getCorners() { return corners; }
+	inline std::array<cordinates, 4> getCorners() {return corners;}
 
 	virtual SDL_Rect getTxtPos() { return txtPos; }
 

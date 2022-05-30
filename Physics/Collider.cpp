@@ -43,10 +43,28 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick& brick)
 	int brickX = brick.getCenterX();
 	int brickY = brick.getCenterY();
 
-	int distance = (int)sqrt(pow((float)ballX - (float)brickX, 2) + pow((float)ballY - (float)brickY, 2));
+	float xDifference = ballX - brickX;
+	float yDifference = ballY - brickY;
+	float xDifferenceSquare = xDifference * xDifference;
+	float yDifferenceSquare = yDifference * yDifference;
+	float sum = xDifferenceSquare + yDifferenceSquare;
+	float distanceBetween = sqrt(sum);
+
+	float halfdiagonal = brick.getHalfDiagonal();
 	//Jeœli pi³ka jest w zasiêgu ceg³y
-	if (distance <= ball.getHalfRadius() + brick.getHalfDiagonal())
+	if (distanceBetween <= ((float)ball.getRadius() + halfdiagonal) )
 	{
+		//Jeœli pi³ka nie znajduje siê w obrêbie ceg³y styka siê z wierzcho³kiem
+		if (ballX < brick.getTopLeft().first || ballX > brick.BottomRight().first)
+		{
+			if (ballY > brick.BottomLeft().second || ballY < brick.TopRight().second)
+			{
+				ball.bounceX();
+				ball.bounceY();
+				return true;
+			}
+		}
+
 		//Sprawdzenie Stycznoœci z wierzcho³kami
 		if (ball.getSpeedX() > 0) //Jeœli pi³ka leci w prawo
 		{
@@ -96,7 +114,7 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick& brick)
 		if (ballY >= brick.getTopLeft().second && ballY <= brick.BottomLeft().second) //Jeœli znajduje siê na odpowiedniej wysokoœci
 		{
 			int xDistance = abs(brickX - ballX);
-			if (xDistance <= ball.getHalfRadius() + (brick.width / 2))
+			if (xDistance <= ball.getRadius() + (brick.width / 2))
 			{
 				ball.bounceX();
 				return true;
@@ -105,7 +123,7 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick& brick)
 		else if (ballX >= brick.getTopLeft().first && ballX <= brick.TopRight().first) //Jeœli znajduje siê na odpowiedniej wysokoœci
 		{
 			int yDistance = abs(brickY - ballY);
-			if (yDistance <= ball.getHalfRadius() + (brick.height / 2))
+			if (yDistance <= ball.getRadius() + (brick.height / 2))
 			{
 				ball.bounceY();
 				return true;

@@ -78,10 +78,10 @@ void init()
     orange.init(200, 200);
     yellow.init(500, 600);
     green.init(800, 200);
-    blue.init(1200, 440);
+    blue.init(1200, 420);
 
     //ball
-    ball.init(300, 300,2,2);
+    ball.init(1350, 330,-3,3);
     
 }
 void update()
