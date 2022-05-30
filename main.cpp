@@ -20,12 +20,6 @@ Surface BG;
 Texture ballTexture;
 Texture brickTexture;
 Texture BGT;
-Brick brick;
-PinkBrick pink;
-OrangeBrick orange;
-//YellowBrick yellow;
-//GreenBrick green;
-//BlueBrick blue;
 Ball ball;
 Collider collider;
 BrickContainer bricks;
@@ -74,18 +68,15 @@ void init()
     collider.init(sw, sh);
 
     //bricks
-    brick.init(100, 200);
-    brick.staticInit(0, 0);
-    pink.init(300, 400);
-    orange.init(200, 200);
-    //yellow.init(500, 600);
-    //green.init(800, 200);
-    //blue.init(1200, 420);
+    Brick::staticInit(0, 0);
 
     bricks.addBrick(new BlueBrick(),600,900);
     bricks.addBrick(new BlueBrick(), 1200, 420);
     bricks.addBrick(new GreenBrick(), 800, 200);
     bricks.addBrick(new YellowBrick(), 500, 600);
+    bricks.addBrick(new OrangeBrick(), 200, 200);
+    bricks.addBrick(new PinkBrick(), 300, 400);
+    bricks.addBrick(new Brick(), 100, 200);
 
     //ball
     ball.init(1350, 330,-3,3);
@@ -104,7 +95,6 @@ void update()
         }
     }
 
-    //collider.ballCollideWithBrick(ball, blue);
 }
 void draw()
 {
@@ -112,13 +102,6 @@ void draw()
     DrawBG(window, BGT, sw, sh);
 
     //Bricks
-    DrawBrick(window, &brick, brickTexture);
-    DrawBrick(window, &pink, brickTexture);
-    //DrawBrick(window, &yellow, brickTexture);
-    DrawBrick(window, &orange, brickTexture);
-    //DrawBrick(window, &green, brickTexture);
-    //DrawBrick(window, &blue, brickTexture);
-
     DrawBricks(window, brickTexture, bricks.getBricks());
 
     //ball
