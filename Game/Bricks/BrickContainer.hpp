@@ -10,6 +10,7 @@ public:
 	BrickContainer() :brickContainer() {}
 	void addBrick(Brick* brick, int x, int y);
 	inline Container getBricks() { return brickContainer; }
+	inline Brick* getBrickWithIndex(int i) { return brickContainer[i]; }
 private:
 	Container brickContainer;
 };
