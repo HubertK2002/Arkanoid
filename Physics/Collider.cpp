@@ -165,7 +165,7 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick* brick)
 		}*/
 
 		//Sprawdzenie Stycznoœci z wierzcho³kami
-		if (ball.getSpeedX() > 0) //Jeœli pi³ka leci w prawo
+	/*	if (ball.getSpeedX() > 0) //Jeœli pi³ka leci w prawo
 		{
 			//Jeœli pi³ka leci w dó³
 			if (ball.getSpeedY() > 0)
@@ -207,7 +207,7 @@ bool Collider::ballCollideWithBrick(Ball& ball, Brick* brick)
 					return true;
 				}
 			}
-		}
+		}*/
 
 		//Sprawdzenie standardowych warunków
 		if (ballY >= brick->getTopLeft().second && ballY <= brick->BottomLeft().second) //Jeœli znajduje siê na odpowiedniej wysokoœci
