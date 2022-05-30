@@ -13,6 +13,7 @@ public:
 	void init(int screenWidth, int screenHeight);
 	bool ballCollideWithWalls(Ball& ball);
 	bool ballCollideWithBrick(Ball& ball, Brick& brick);
+	bool ballCollideWithBrick(Ball& ball, Brick* brick);
 	bool brickCornersFullfillBallInequality(cordinates ballCenter, std::array<cordinates,4> brickCorners, int ballRadius );
 	bool brickCornerFullfillBallInequality(cordinates ballCenter, cordinates brickCorner, int ballRadius);
 

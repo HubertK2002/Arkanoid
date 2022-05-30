@@ -12,6 +12,7 @@ public:
 	void eraseBrickWithIndex(int i) { brickContainer.erase(brickContainer.begin() + i); }
 	inline Container getBricks() { return brickContainer; }
 	inline Brick* getBrickWithIndex(int i) { return brickContainer[i]; }
+	inline bool hasSomething() { return !brickContainer.empty(); }
 	int getClosestBrickIndex(cordinates wsp);
 	Brick* getClosestBrick(cordinates wsp);
 private:
