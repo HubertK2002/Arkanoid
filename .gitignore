@@ -33,6 +33,7 @@
 #SDL dependencies
 SDL2/*
 SDL2_image/*
+SDL2_mixer/*
 #Others
 x64/*
 
